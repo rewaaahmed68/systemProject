@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin-registrations">
+  <header class="topbar">
+    <div class="brand">📚 Course Registration System</div>
+    <div class="userbox">
+      <span id="whoami"></span>
+      <button class="btn ghost small" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+  <nav class="tabs">
+    <a class="tab" href="admin-courses.html">Manage Courses</a>
+    <a class="tab" href="admin-sections.html">Manage Sections</a>
+    <a class="tab" href="admin-students.html">Student Records</a>
+    <a class="tab active" href="admin-registrations.html">Registrations</a>
+    <a class="tab" href="admin-management.html">Manage Admins</a>
+  </nav>
+  <main>
+    <div class="card">
+      <div class="card-head"><h3>All Student Registrations</h3></div>
+      <table class="table">
+        <thead><tr>
+          <th>Student ID</th><th>Student Name</th><th>Course Code</th><th>Course Name</th>
+          <th>Section</th><th>Schedule</th><th>Room</th><th>Tuition</th><th></th>
+        </tr></thead>
+        <tbody id="regRows"></tbody>
+      </table>
+    </div>
+  </main>
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

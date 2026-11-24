@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Sections</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin-sections">
+  <header class="topbar">
+    <div class="brand">📚 Course Registration System</div>
+    <div class="userbox">
+      <span id="whoami"></span>
+      <button class="btn ghost small" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+  <nav class="tabs">
+    <a class="tab" href="admin-courses.html">Manage Courses</a>
+    <a class="tab active" href="admin-sections.html">Manage Sections</a>
+    <a class="tab" href="admin-students.html">Student Records</a>
+    <a class="tab" href="admin-registrations.html">Registrations</a>
+    <a class="tab" href="admin-management.html">Manage Admins</a>
+  </nav>
+  <main>
+    <div class="card">
+      <div class="card-head"><h3>Add / Edit Course Section</h3></div>
+      <form id="sectionForm" class="form-grid">
+        <label>Course <select id="sCourse"></select></label>
+        <label>Day <select id="sDay">
+          <option>Sunday</option><option>Monday</option><option>Tuesday</option>
+          <option>Wednesday</option><option>Thursday</option><option>Saturday</option>
+        </select></label>
+        <label>Start Time <input id="sStart" type="time" value="09:00" required></label>
+        <label>End Time <input id="sEnd" type="time" value="10:30" required></label>
+        <label>Room <input id="sRoom" placeholder="A101" required></label>
+        <label>Capacity <input id="sCap" type="number" min="1" value="30" required></label>
+        <div class="form-actions">
+          <button class="btn primary" type="submit" id="sectionSubmitBtn">Add Section</button>
+          <button class="btn hidden" type="button" id="cancelSectionEdit">Cancel Edit</button>
+        </div>
+      </form>
+    </div>
+    <div class="card">
+      <div class="card-head"><h3>All Sections</h3></div>
+      <table class="table">
+        <thead><tr>
+          <th>ID</th><th>Course</th><th>Day</th><th>Time</th><th>Room</th>
+          <th>Enrolled</th><th>Capacity</th><th>Actions</th>
+        </tr></thead>
+        <tbody id="sectionRows"></tbody>
+      </table>
+    </div>
+  </main>
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

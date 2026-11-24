@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin-courses">
+  <header class="topbar">
+    <div class="brand">📚 Course Registration System</div>
+    <div class="userbox">
+      <span id="whoami"></span>
+      <button class="btn ghost small" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+  <nav class="tabs">
+    <a class="tab active" href="admin-courses.html">Manage Courses</a>
+    <a class="tab" href="admin-sections.html">Manage Sections</a>
+    <a class="tab" href="admin-students.html">Student Records</a>
+    <a class="tab" href="admin-registrations.html">Registrations</a>
+    <a class="tab" href="admin-management.html">Manage Admins</a>
+  </nav>
+  <main>
+    <div class="card">
+      <div class="card-head"><h3 id="courseFormTitle">Add New Course</h3></div>
+      <form id="courseForm" class="form-grid">
+        <label>Course Code <input id="cCode" placeholder="CS401" required></label>
+        <label>Course Name <input id="cName" placeholder="Software Engineering" required></label>
+        <label>Credit Hours <input id="cCredits" type="number" min="1" max="6" value="3" required></label>
+        <label>Prerequisite <select id="cPrereq"><option value="">None</option></select></label>
+        <div class="form-actions">
+          <button class="btn primary" type="submit" id="courseSubmitBtn">Add Course</button>
+          <button type="button" class="btn hidden" id="cancelEditBtn">Cancel Edit</button>
+        </div>
+      </form>
+    </div>
+    <div class="card">
+      <div class="card-head"><h3>All Courses</h3></div>
+      <table class="table">
+        <thead><tr>
+          <th>Code</th><th>Name</th><th>Credits</th><th>Prerequisite</th><th>Sections</th><th>Actions</th>
+        </tr></thead>
+        <tbody id="courseRows"></tbody>
+      </table>
+    </div>
+  </main>
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="student-courses">
+  <header class="topbar">
+    <div class="brand">📚 Course Registration System</div>
+    <div class="userbox">
+      <span id="whoami"></span>
+      <button class="btn ghost small" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+  <nav class="tabs">
+    <a class="tab active" href="student-courses.html">Browse Courses</a>
+    <a class="tab" href="student-my-courses.html">My Courses</a>
+    <a class="tab" href="student-schedule.html">Weekly Schedule</a>
+    <a class="tab" href="student-tuition.html">Tuition Status</a>
+  </nav>
+  <main>
+    <div class="toolbar">
+      <input id="searchInput" class="search" placeholder="🔍 Search by course name or code...">
+    </div>
+    <div id="courseList"></div>
+  </main>
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

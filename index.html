@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — Course Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+
+  <section id="loginView">
+    <div class="login-card">
+      <h1>Student Course Registration System</h1>
+      <p class="muted">Faculty of Computers &amp; Information</p>
+
+      <div class="role-tabs">
+        <button class="role-tab active" data-role="student">Student</button>
+        <button class="role-tab" data-role="admin">Administrator</button>
+      </div>
+
+      <form id="loginForm">
+        <label>ID / Username
+          <input id="loginId" placeholder="Enter your ID" required autocomplete="off">
+        </label>
+        <label>Password
+          <input id="loginPass" type="password" placeholder="Enter your password" required>
+        </label>
+        <button class="btn primary full" type="submit">Sign In</button>
+      </form>
+
+      <p class="hint" id="loginHint"></p>
+
+      <p class="hint" style="margin-top:10px;background:transparent;padding:0">
+        Don't have an account?
+        <a href="register.html" style="color:#2563eb;font-weight:700">Create one</a>
+      </p>
+    </div>
+  </section>
+
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

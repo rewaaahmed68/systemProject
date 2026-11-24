@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="student-my-courses">
+  <header class="topbar">
+    <div class="brand">📚 Course Registration System</div>
+    <div class="userbox">
+      <span id="whoami"></span>
+      <button class="btn ghost small" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+  <nav class="tabs">
+    <a class="tab" href="student-courses.html">Browse Courses</a>
+    <a class="tab active" href="student-my-courses.html">My Courses</a>
+    <a class="tab" href="student-schedule.html">Weekly Schedule</a>
+    <a class="tab" href="student-tuition.html">Tuition Status</a>
+  </nav>
+  <main>
+    <div class="card">
+      <div class="card-head">
+        <h3>My Registered Courses</h3>
+        <div class="muted small">Total credits: <b id="myCredits"></b></div>
+      </div>
+      <table class="table">
+        <thead><tr>
+          <th>Code</th><th>Course Name</th><th>Credits</th><th>Schedule</th><th>Room</th><th>Action</th>
+        </tr></thead>
+        <tbody id="myCoursesBody"></tbody>
+      </table>
+    </div>
+  </main>
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

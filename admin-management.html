@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Admins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin-management">
+  <header class="topbar">
+    <div class="brand">📚 Course Registration System</div>
+    <div class="userbox">
+      <span id="whoami"></span>
+      <button class="btn ghost small" id="logoutBtn">Logout</button>
+    </div>
+  </header>
+  <nav class="tabs">
+    <a class="tab" href="admin-courses.html">Manage Courses</a>
+    <a class="tab" href="admin-sections.html">Manage Sections</a>
+    <a class="tab" href="admin-students.html">Student Records</a>
+    <a class="tab" href="admin-registrations.html">Registrations</a>
+    <a class="tab active" href="admin-management.html">Manage Admins</a>
+  </nav>
+  <main>
+    <div class="card">
+      <div class="card-head"><h3>Add New Administrator</h3></div>
+      <form id="adminForm" class="form-grid">
+        <label>Username
+          <input id="aUser" placeholder="e.g. manager" required autocomplete="off">
+        </label>
+        <label>Password
+          <input id="aPass" type="password" placeholder="At least 4 characters" minlength="4" required>
+        </label>
+        <label>Confirm Password
+          <input id="aPass2" type="password" placeholder="Repeat password" minlength="4" required>
+        </label>
+        <div class="form-actions">
+          <button class="btn primary" type="submit">Add Administrator</button>
+        </div>
+      </form>
+    </div>
+    <div class="card">
+      <div class="card-head"><h3>All Administrators</h3></div>
+      <table class="table">
+        <thead><tr>
+          <th>Username</th><th>Password</th><th>Actions</th>
+        </tr></thead>
+        <tbody id="adminRows"></tbody>
+      </table>
+    </div>
+  </main>
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
